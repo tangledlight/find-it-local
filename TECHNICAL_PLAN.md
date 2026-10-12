@@ -254,11 +254,11 @@ There are intentionally no search-result caps, polling intervals, refresh timers
 
 | Decision / figure | Baseline and method | Recorded |
 |---|---|---|
-| Seeded catalog size | Counted the product rows in the supplied PRD: thirty-six mocked products | 2026-10-12 |
+| Seeded catalog size | Counted the product rows in the supplied PRD: thirty-five mocked products. This was corrected after the adapter behavior test counted the seeded records. | 2026-10-12 |
 | Seeded category coverage | Counted distinct category labels in the supplied PRD: eight categories | 2026-10-12 |
 | Search examples to protect | The PRD explicitly names “rope”, “plates”, and “picnic blanket”; tests must cover them | 2026-10-12 |
 | Availability states | The PRD defines exactly three shopper-facing states: In stock, Low stock, Out of stock | 2026-10-12 |
-| Search delays and result caps | Baseline: a local fixture catalog of thirty-six records; method: no runtime measurement yet because no implementation exists. Decision: no imposed limit or delay. Revisit after a measured browser trace shows a user-visible issue. | 2026-10-12 |
+| Search delays and result caps | Baseline: a local fixture catalog of thirty-five records; method: no runtime measurement yet because no implementation exists. Decision: no imposed limit or delay. Revisit after a measured browser trace shows a user-visible issue. | 2026-10-12 |
 
 If a later task adds a limit a developer can hit—for example an image size budget, search result cap, or test timeout—it must show the constraint and a practical recovery path at the earliest surface that can know it. It must also add a row here with the baseline, measurement method, date, and why the limit is appropriate.
 

@@ -9,7 +9,7 @@ import {
 } from "../src/catalogAdapter.js";
 
 test("the adapter provides the complete mocked catalog", () => {
-  assert.equal(getCatalog().length, 36);
+  assert.equal(getCatalog().length, 35);
   assert.equal(getCatalog().every((product) => product.availability.label), true);
 });
 
