@@ -1,0 +1,68 @@
+:root {
+  --cream: #f6f1e8;
+  --brick: #c85b4a;
+  --green: #28483e;
+  --mustard: #d7a64a;
+  --ink: #1e2924;
+  --paper: #fffdf9;
+  --muted: #65716b;
+  --line: #d9d4c9;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; line-height: 1.5; }
+button, input, select { font: inherit; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--mustard); outline-offset: 3px; }
+.skip-link { position: fixed; top: -4rem; left: 1rem; z-index: 10; padding: .6rem .8rem; background: var(--green); color: white; }
+.skip-link:focus { top: 1rem; }
+.site-header { display: flex; justify-content: space-between; align-items: center; max-width: 75rem; margin: 0 auto; padding: 1.25rem 1.5rem; }
+.wordmark { display: inline-flex; align-items: center; gap: .6rem; text-decoration: none; font-weight: 800; font-size: 1.1rem; letter-spacing: -.03em; }
+.wordmark-mark { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--brick); color: white; font-size: .7rem; letter-spacing: -.08em; }
+.tagline { margin: 0; color: var(--muted); font-style: italic; }
+main { max-width: 75rem; margin: 0 auto; padding: 0 1.5rem 3rem; }
+.hero { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(17rem, .8fr); gap: 2rem; align-items: stretch; padding: 3.5rem 0 4.5rem; }
+.hero h1, .product-detail h1, .not-found h1 { max-width: 11ch; margin: .2rem 0 1.1rem; font-size: clamp(2.8rem, 6vw, 5.7rem); line-height: .94; letter-spacing: -.075em; }
+.hero > div > p:not(.eyebrow) { max-width: 34rem; font-size: 1.12rem; }
+.eyebrow, .category { margin: 0; color: var(--brick); font-size: .73rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.store-details { padding: 1.5rem; border-radius: 1.25rem; background: var(--green); color: white; box-shadow: .4rem .4rem 0 var(--mustard); }
+.store-details h2 { margin: .35rem 0 0; font-size: 1.6rem; letter-spacing: -.04em; }
+.store-details p, .store-details address, .store-details a { display: block; margin: .5rem 0 0; font-style: normal; }
+.store-details .eyebrow { color: #f4c86f; }
+.subtle { color: inherit; opacity: .78; font-size: .85rem; }
+.catalog { padding: 2rem 0; }
+.catalog-heading { display: flex; justify-content: space-between; align-items: end; gap: 2rem; margin-bottom: 1.5rem; }
+.catalog-heading h2 { margin: .2rem 0 0; font-size: 2.2rem; letter-spacing: -.055em; }
+.search-form { width: min(100%, 25rem); }
+.search-form label { display: block; margin-bottom: .4rem; font-size: .85rem; font-weight: 700; }
+.search-control { display: flex; align-items: center; gap: .4rem; border: 1px solid var(--green); border-radius: 999px; background: var(--paper); padding: .25rem .5rem .25rem 1rem; }
+.search-control input { min-width: 0; flex: 1; border: 0; outline: 0; background: transparent; }
+button, .button-link { border: 0; border-radius: 999px; padding: .55rem .85rem; background: var(--green); color: white; cursor: pointer; font-weight: 700; text-decoration: none; }
+.clear-search { background: transparent; color: var(--green); }
+.result-summary { margin: 0 0 1rem; color: var(--muted); }
+.product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin: 0; padding: 0; list-style: none; }
+.product-card { min-width: 0; border: 1px solid var(--line); border-radius: 1rem; overflow: hidden; background: var(--paper); transition: transform .15s ease, box-shadow .15s ease; }
+.product-card:hover { transform: translateY(-.2rem); box-shadow: 0 .5rem 1.4rem rgb(40 72 62 / .12); }
+.product-card a { display: block; min-height: 100%; padding-bottom: 1rem; text-decoration: none; }
+.product-card > a > :not(.product-art) { margin-left: 1rem; margin-right: 1rem; }
+.product-card h2 { margin-top: .2rem; margin-bottom: .7rem; font-size: 1rem; line-height: 1.2; letter-spacing: -.025em; }
+.product-art { display: grid; place-items: center; height: 11rem; margin-bottom: 1rem; padding: 1rem; color: var(--green); background: #ebdfc5; font-family: Georgia, serif; font-size: clamp(1.35rem, 2vw, 2.1rem); font-style: italic; text-align: center; text-transform: capitalize; }
+.art-tableware { background: #d5e1e5; }.art-table-linens { background: #f3d9c5; }.art-food-storage { background: #cdddc9; }.art-hosting { background: #e6d3b5; }.art-outdoors { background: #d6e0b5; }.art-utility-goods { background: #ddcfb9; }.art-everyday-carry { background: #d1ddcb; }
+.price, .detail-price { margin-top: 0; font-weight: 750; }
+.availability { display: flex; gap: .35rem; align-items: center; margin-top: .75rem; margin-bottom: 0; font-weight: 800; font-size: .85rem; }
+.availability-in_stock { color: #316645; }.availability-low_stock { color: #8a5d00; }.availability-out_of_stock { color: #7a4141; }
+.updated { margin-top: .1rem; margin-bottom: 0; color: var(--muted); font-size: .75rem; }
+.is-unavailable { background: #f1efeb; }.is-unavailable .product-art { filter: grayscale(.85); opacity: .7; }
+.inventory-note { max-width: 44rem; margin: 2rem 0 0; color: var(--muted); font-size: .9rem; }
+.empty-state, .not-found { max-width: 40rem; padding: 3rem; border: 1px dashed var(--brick); border-radius: 1rem; background: var(--paper); }
+.empty-state h2 { margin: .3rem 0; }.empty-state button { margin-top: .5rem; }
+.back-link { display: inline-block; margin: 2rem 0; color: var(--green); font-weight: 700; }
+.product-detail { display: grid; grid-template-columns: minmax(16rem, 1fr) minmax(0, 1fr); gap: 3rem; align-items: center; }
+.product-detail .product-art { height: 27rem; border-radius: 1.25rem; font-size: 3rem; }.detail-copy h1 { font-size: clamp(2.7rem, 5vw, 4.6rem); }.detail-price { font-size: 1.3rem; }.description { max-width: 33rem; font-size: 1.1rem; }
+.detail-store { max-width: 30rem; margin: 3rem 0; }.not-found { margin: 5rem 0; }
+.simulator { margin-top: 3rem; padding: 1.5rem; border: 2px dashed var(--mustard); border-radius: 1rem; background: #fff9e8; }.simulator h2 { margin: .2rem 0; }.simulator form { display: flex; flex-wrap: wrap; align-items: end; gap: 1rem; }.simulator label { display: grid; gap: .3rem; font-size: .85rem; font-weight: 700; }.simulator select { max-width: 20rem; padding: .45rem; border: 1px solid var(--line); border-radius: .4rem; }
+@media (max-width: 52rem) { .hero, .product-detail { grid-template-columns: 1fr; }.catalog-heading { display: block; }.search-form { margin-top: 1.5rem; }.product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }.product-detail .product-art { height: 18rem; } }
+@media (max-width: 34rem) { .site-header { align-items: start; }.tagline { display: none; }.product-grid { grid-template-columns: 1fr; }.hero { padding-top: 2.5rem; }.hero h1 { font-size: 3rem; } }
